@@ -1,0 +1,10 @@
+.add  {
+    display: flex;
+}
+.box-add{
+    margin: auto ;
+}
+
+.error-message {
+    display: inline;;
+}

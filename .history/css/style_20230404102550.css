@@ -1,0 +1,20 @@
+.add  {
+    display: flex;
+}
+.box-add{
+    margin: auto ;
+}
+
+.message
+{
+    display: none;
+}
+.error-message {
+    display: inline;;
+}
+
+#products {
+    background-color: cornflowerblue;
+    width: 33.33333%;
+    border-radius: 10px;
+}

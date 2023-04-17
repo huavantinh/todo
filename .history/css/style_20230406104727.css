@@ -1,0 +1,133 @@
+/* resetcss */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Nav */
+.container-fluid{
+}
+
+#nav {
+    position: fixed;
+}
+
+.brand{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+}
+.nav-menu .list-menu{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+.nav-menu .list-menu a{
+    color: black;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 450;
+    margin: 0 20px;
+}
+.brand .search-box{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button {
+    border-radius: 8px;
+}
+
+.search-box button:hover {
+    background-color:orange;;
+    border-radius: 8px;
+}
+.brand img {
+    width: 50px;
+    height: 50px;
+    border-color: orange;
+}
+.brand #i1{
+    margin: 10px;
+    float: left;
+    width: 390px;
+    max-width: 400px;
+    font-size: 30px;
+    color: orange;
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.brand #i2{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 390px;
+    max-width: 400px;
+    font-family: cursive;
+    font-weight: 500;
+}
+
+
+
+
+/* content  */
+.add  {
+    display: flex;
+}
+.box-add{
+    margin: auto ;
+}
+
+.message
+{
+    display: none;
+}
+.error-message {
+    display: inline;;
+}
+
+#products {
+    background-color: cornflowerblue;
+    width: 33.33333%;
+    border-radius: 10px;
+}
+.product1 {
+    margin-left: 10px;
+    display: flex;
+    border-bottom: 1px solid #636363 ;
+    height: 30px; 
+    position: relative;
+    align-items: center;
+
+}
+
+.checkbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: aquamarine;
+}
+.product1 button {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #d6d6d6;
+    max-height: 90%;
+    position: absolute;
+    right: 10px;
+    
+}

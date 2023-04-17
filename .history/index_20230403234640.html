@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+    <div>
+        <div class="container">
+           <div class="add">
+            <div class="box-add">
+                <input id="input-sub" type="text">
+                <button id="button-submit" onclick="submit()">Submit</button>
+                <button id="delete" onclick="deleteAll()">Delete All</button>
+                <button id="checkall"  onclick="checkAll(this); checkItem(event);">Check All</button>
+                <button id="uncheckall" onclick="unCheckAll(this);checkItem(event);">UnCheck All</button>
+
+            </div>
+           </div>
+
+           
+           <div id="products">
+
+           </div>
+           
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

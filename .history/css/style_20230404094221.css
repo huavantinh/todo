@@ -1,0 +1,14 @@
+.add  {
+    display: flex;
+}
+.box-add{
+    margin: auto ;
+}
+
+.message
+{
+    display: none;
+}
+.error-message {
+    display: inline;;
+}

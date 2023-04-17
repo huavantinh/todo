@@ -1,0 +1,93 @@
+/* resetcss */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Nav */
+
+#nav {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand{
+    display: flex;
+    width: 980px;
+    height: 50px;
+}
+.nav-menu{
+    width: 980px;
+    height: 50px;
+    /* text-decoration: none; */
+    /* text-decoration: underline; */
+    color: orange;
+}
+.brand .search-box{
+    /* float: right; */
+    justify-content:right;
+}
+.brand img {
+    width: 50px;
+    height: 50px;
+    border-color: orange;
+}
+.brand i{
+    margin: 10px;
+    float: left;
+    max-width: 100px;
+    font-size: 30px;
+    color: orange;;
+    }
+.brand button {
+    border-radius: 10px;
+}
+
+
+
+/* content  */
+.add  {
+    display: flex;
+}
+.box-add{
+    margin: auto ;
+}
+
+.message
+{
+    display: none;
+}
+.error-message {
+    display: inline;;
+}
+
+#products {
+    background-color: cornflowerblue;
+    width: 33.33333%;
+    border-radius: 10px;
+}
+.product1 {
+    margin-left: 10px;
+    display: flex;
+    border-bottom: 1px solid #636363 ;
+    height: 30px; 
+    position: relative;
+    align-items: center;
+
+}
+
+.checkbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: aquamarine;
+}
+.product1 button {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #d6d6d6;
+    max-height: 90%;
+    position: absolute;
+    right: 10px;
+    
+}
