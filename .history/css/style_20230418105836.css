@@ -180,31 +180,25 @@
         position: relative;
     }
 
-    .table .linetitle {
+    .table .linetasktitle .linedoingtitle .lineclear{
         display: flex;
     }
 
-    .table .linetitle .title{
+    .table #i1 #i2 #i3{
         margin-left: 45%;
     }
-    .table button {
+    .table .lineclear button {
         border-radius: 5px;
         border-color: #cccaca;
         padding: 0 4px;
-    } 
-    .table .linetitle button {
-        border-radius: 5px;
-        border-color: #cccaca;
-        padding: 0 4px;
-    }  
+    }   
 
 
     .table .col-item {
         /* display: flex; */
         float: left;
         width: calc(1116px / 3 - 5px ); 
-        height: auto;
-        min-height: 400px;
+        height: 1000px;
         justify-content: center;
         background-color: rgb(231, 227, 108);
         border-radius: 10px;

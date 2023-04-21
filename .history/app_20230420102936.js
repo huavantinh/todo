@@ -94,7 +94,12 @@ function makecol() {
   let doings = document.getElementById("idoing");
   console.log(doings)
   while (products.firstChild) {
-      products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
+    let child1 = products.firstChild
+    debugger
+    console.log(child1)
+    let child2ofchild1 = products.firstChild.nextSibling
+    console.log(child2ofchild1)
+    // child1.removechild(products.secondchild) // Xem lại remove second child, Lấy con thứ 2 của 1 item . xóa nó. 
     doings.appendChild(products.firstChild);
   }
   clearitemscol();
@@ -105,16 +110,13 @@ function makecol() {
 let donebutton = document.getElementById("doneall1");
 donebutton.addEventListener("click", doneall);
 function doneall() {
-  // debugger
   let products = document.getElementById("products");
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(todos);
   while (products.firstChild) {
-    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
-    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)  // remove checkboxe when product moved to done list 
     dones.appendChild(products.firstChild);
   }
-  clearitemscol();    
+  clearitemscol();
   setstorages();
   setstorages3();
 }
@@ -127,7 +129,6 @@ function doneall2() {
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(idoingsave);
   while (doings.firstChild) {
-    doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling)
     dones.appendChild(doings.firstChild);
   }
   clearitemscol2();
@@ -348,4 +349,6 @@ function checkidoing(event) {
   setstorages2();
   setstorages3();
 }
-
+console.log(todos);
+console.log(idoingsave);
+console.log(idonesave);

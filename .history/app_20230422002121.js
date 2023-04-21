@@ -105,7 +105,7 @@ function makecol() {
 let donebutton = document.getElementById("doneall1");
 donebutton.addEventListener("click", doneall);
 function doneall() {
-  // debugger
+  debugger
   let products = document.getElementById("products");
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(todos);

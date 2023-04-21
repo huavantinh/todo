@@ -1,16 +1,22 @@
 let todos =
-  localStorage.length > 0 ? JSON.parse(localStorage.getItem("todolist")) : [];
+  localStorage.length > 0
+    ? JSON.parse(localStorage.getItem("todolist"))
+    : [];
 
 let idoingsave =
-  localStorage.length > 0 ? JSON.parse(localStorage.getItem("idoinglist")) : [];
+  localStorage.length > 0 
+    ? JSON.parse(localStorage.getItem("idoinglist"))
+    : [];
 
 let idonesave =
-  localStorage.length > 0 ? JSON.parse(localStorage.getItem("idonelist")) : [];
-
+  localStorage.length > 0 
+    ? JSON.parse(localStorage.getItem("idonelist"))
+    : [];
+ 
 function submit() {
   let textBox = document.getElementById("input-sub");
   let content = textBox.value;
-  let randId = Math.random();
+  let randId = Math.random();  
   document.getElementById("new-task-message").classList.add("error-message");
   if (content == "") {
     onkeydown = function () {
@@ -22,23 +28,20 @@ function submit() {
   } else {
     addContent(content, randId);
     textBox.value = "";
-
+    
     todos.push(content);
     setstorages();
   }
 }
-
+ 
 function setstorages() {
-  localStorage.length > 0 &&
-    localStorage.setItem("todolist", JSON.stringify(todos));
+  localStorage.length > 0 && localStorage.setItem("todolist", JSON.stringify(todos));
 }
 function setstorages2() {
-  localStorage.length > 0 &&
-    localStorage.setItem("idoinglist", JSON.stringify(idoingsave));
+  localStorage.length > 0 && localStorage.setItem("idoinglist", JSON.stringify(idoingsave));
 }
 function setstorages3() {
-  localStorage.length > 0 &&
-    localStorage.setItem("idonelist", JSON.stringify(idonesave));
+  localStorage.length > 0 && localStorage.setItem("idonelist", JSON.stringify(idonesave));
 }
 
 function addContent(content, randId) {
@@ -81,101 +84,23 @@ function addContent3(content, randId) {
       '<div class="taskname">' +
       content +
       "</div>" +
-      '<button class= "  delete-item" onclick="deleteItemdone(event)">Delete</button>' +
+       '<button class= "  delete-item" onclick="deleteItemdone(event)">Delete</button>' +
       "</div>"
   );
 }
-// function make all columns
-let makebutton = document.getElementById("makeall");
-makebutton.addEventListener("click", makecol);
-function makecol() {
-  idoingsave = idoingsave.concat(todos);
-  var products = document.getElementById("products");
-  let doings = document.getElementById("idoing");
-  console.log(doings)
-  while (products.firstChild) {
-      products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
-    doings.appendChild(products.firstChild);
-  }
-  clearitemscol();
-  setstorages2();
-}
-
-//functions for doneall1 button
-let donebutton = document.getElementById("doneall1");
-donebutton.addEventListener("click", doneall);
-function doneall() {
-  // debugger
-  let products = document.getElementById("products");
-  let dones = document.getElementById("idone");
-  idonesave = idonesave.concat(todos);
-  while (products.firstChild) {
-    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
-    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)  // remove checkboxe when product moved to done list 
-    dones.appendChild(products.firstChild);
-  }
-  clearitemscol();    
-  setstorages();
-  setstorages3();
-}
-
-//functions for doneall2 button
-let donebutton2 = document.getElementById("doneall2");
-donebutton2.addEventListener("click", doneall2);
-function doneall2() {
-  let doings = document.getElementById("idoing");
-  let dones = document.getElementById("idone");
-  idonesave = idonesave.concat(idoingsave);
-  while (doings.firstChild) {
-    doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling)
-    dones.appendChild(doings.firstChild);
-  }
-  clearitemscol2();
-  setstorages2();
-  setstorages3();
-}
-
-// function clearitems in columns
-let clearitems = document.getElementById("clear1");
-clearitems.addEventListener("click", clearitemscol);
+//function clearitems in columns
+// debugger
+let clearitems = document.getElementById("clear1")
+clearitems.addEventListener("click", clearitemscol)
 function clearitemscol() {
-  var products = document.getElementById("products");
-  while (products.firstChild) {
-    products.removeChild(products.firstChild);
-  }
-  console.log(products);
-  todos = [];
-  console.log(todos);
-  setstorages();
+  let items = document.getElementsByClassName("producttask")
+  console.log(items)
+  console.log(todos)
+  todos = []
 }
-
-let clearitem2 = document.getElementById("clear2");
-clearitem2.addEventListener("click", clearitemscol2);
-function clearitemscol2() {
-  var doings = document.getElementById("idoing");
-  while (doings.firstChild) {
-    doings.removeChild(doings.firstChild);
-  }
-  idoingsave = [];
-  setstorages2();
-}
-
-let clearitem3 = document.getElementById("clear3");
-clearitem3.addEventListener("click", clearitemscol3);
-function clearitemscol3() {
-  var dones = document.getElementById("idone");
-  while (dones.firstChild) {
-    dones.removeChild(dones.firstChild);
-  }
-  idonesave = [];
-  setstorages3();
-}
-
 function deleteAll() {
-  clearitemscol()
-  clearitemscol2()
-  clearitemscol3()
-
+  var products = document.getElementById("products");
+  products.innerHTML = "";
 }
 // function checkAll() {
 //   var checkboxes = document.getElementsByClassName("checkbox");
@@ -202,10 +127,10 @@ function deleteItem(event) {
   var products = document.getElementById("products");
   var arraypro = document.getElementsByClassName("producttask");
   var div = event.currentTarget.parentNode;
-  let index1 = Array.prototype.indexOf.call(arraypro, div);
+  let index1 = Array.prototype.indexOf.call(arraypro, div); 
   // let index2 = Array.prototype.indexOf.call(todos2, index1);  ////////check lại function này. không lọc ra được index trong todos
   // console.log(index2)
-  todos.splice(index1, 1); // dùng luôn index 1 . vì 2 array giống, index nó giống nhau
+  todos.splice(index1, 1);  // dùng luôn index 1 . vì 2 array giống, index nó giống nhau
   products.removeChild(div);
   setstorages();
 }
@@ -228,7 +153,7 @@ function deleteItemdone(event) {
   // let index2 = Array.prototype.indexOf.call(idonesave, index1);
   dones.removeChild(div);
   idonesave.splice(index1, 1);
-
+ 
   setstorages3();
 }
 
@@ -259,6 +184,7 @@ function checkItem(event) {
   products.removeChild(div2);
   setstorages();
   setstorages3();
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -274,11 +200,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   if (Array.isArray && idonesave.length > 0) {
-    idonesave.forEach(function printlocal3(content, index) {
-      addContent3(content, index);
-    });
+      idonesave.forEach(function printlocal3(content, index) {
+        addContent3(content, index);
+      });
+    }
   }
-});
+);
 
 // moveitem to done
 function makedoing(event) {
@@ -340,12 +267,15 @@ function checkidoing(event) {
       '</div> <button class"delete-item" onclick="deleteItemdone(event)">Delete</button>' +
       "</div>"
   );
-
+  
   idonesave.push(content);
   let idoing = document.getElementById("idoing");
   idoing.removeChild(div2);
-  idoingsave.splice(index1, 1);
+  idoingsave.splice(index1,1) 
   setstorages2();
   setstorages3();
-}
 
+}
+console.log(todos);
+console.log(idoingsave);
+console.log(idonesave);

@@ -105,13 +105,13 @@ function makecol() {
 let donebutton = document.getElementById("doneall1");
 donebutton.addEventListener("click", doneall);
 function doneall() {
-  // debugger
+  debugger
   let products = document.getElementById("products");
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(todos);
   while (products.firstChild) {
     products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
-    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)  // remove checkboxe when product moved to done list 
+    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling.nextSibling)  // remove checkboxe when product moved to done list 
     dones.appendChild(products.firstChild);
   }
   clearitemscol();    
@@ -127,7 +127,7 @@ function doneall2() {
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(idoingsave);
   while (doings.firstChild) {
-    doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling)
+    doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling.nextSibling)
     dones.appendChild(doings.firstChild);
   }
   clearitemscol2();
