@@ -29,15 +29,15 @@ function submit() {
 }
 
 function setstorages() {
-  localStorage &&
+  localStorage.length > 0 &&
     localStorage.setItem("todolist", JSON.stringify(todos));
 }
 function setstorages2() {
-  localStorage &&
+  localStorage.length > 0 &&
     localStorage.setItem("idoinglist", JSON.stringify(idoingsave));
 }
 function setstorages3() {
-  localStorage &&
+  localStorage.length > 0 &&
     localStorage.setItem("idonelist", JSON.stringify(idonesave));
 }
 
