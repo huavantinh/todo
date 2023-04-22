@@ -1,11 +1,11 @@
 let todos =
-  localStorage.getItem("todolist") ? JSON.parse(localStorage.getItem("todolist")) : [];
+  localStorage.getItem("idoinglist") ? JSON.parse(localStorage.getItem("todolist")) : [];
 
 let idoingsave =
   localStorage.getItem("idoinglist") ? JSON.parse(localStorage.getItem("idoinglist")) : [];
 
 let idonesave =
-localStorage.getItem("idonelist") ? JSON.parse(localStorage.getItem("idonelist")) : [];
+  localStorage.length > 0 ? JSON.parse(localStorage.getItem("idonelist")) : [];
 
 function submit() {
   let textBox = document.getElementById("input-sub");
