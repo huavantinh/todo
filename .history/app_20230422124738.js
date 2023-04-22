@@ -163,7 +163,7 @@ function donealladdContent3(content, randId) {
 }
 
 //function for doneall2
-let donebutton2 = document.getElementById("doneall2");
+let donebutton2 = document.getElementById("doneall1");
 donebutton2.addEventListener("click", doneall2);
 function doneall2() {
   let doings = document.getElementById("idoing");
@@ -191,6 +191,23 @@ function donealladdContent3(content, randId) {
       "</div>"
   );
 }
+
+
+// //functions for doneall2 button
+// let donebutton2 = document.getElementById("doneall2");
+// donebutton2.addEventListener("click", doneall2);
+// function doneall2() {
+//   let doings = document.getElementById("idoing");
+//   let dones = document.getElementById("idone");
+//   idonesave = idonesave.concat(idoingsave);
+//   while (doings.firstChild) {
+//     doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling)
+//     dones.appendChild(doings.firstChild);
+//   }
+//   clearitemscol2();
+//   setstorages2();
+//   setstorages3();
+// }
 
 // function clearitems in columns
 let clearitems = document.getElementById("clear1");

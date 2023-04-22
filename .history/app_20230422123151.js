@@ -107,19 +107,53 @@ function addContent3(content, randId) {
 let makebutton = document.getElementById("makeall");
 makebutton.addEventListener("click", makecol);
 function makecol() {
+  // debugger
   idoingsave = idoingsave.concat(todos);
   var products = document.getElementById("products");
+  let doings = document.getElementById("idoing");
+  // console.log(doings)
+  
+  
+  
   while (products.firstChild) {
     let content = products.firstChild.firstChild.textContent;
   console.log(content)
   let randId = Math.random()
-  makealladdContent2(content, randId);
+  addContent20();
   products.removeChild(products.firstChild);
+
+      // products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
+      // products.firstChild.removeChild(products.firstChild.firstChild.nextSibling.nextSibling.nextSibling)
+      //cach 1 failed  
+      // let newbutton = document.createElement("button");
+      // newbutton.textContent = "Delete";
+      // newbutton.className = "delete-item";
+      // newbutton.onclick = deleteItemdoing;
+      // console.log(newbutton)
+      // products.firstChild.insertBefore(newbutton,products.firstChild.children[2])
+//cach 2 failed
+      // let content = document.getElementsBy
+      //  let randId = Math.random();
+      //  products.firstChild.innerHTML = '<div style="color: black" class=" productdoing product1" id="row' +
+      //  randId +
+      //  '">' +
+      //  '<div class="taskname">' +
+      //  content +
+      //  "</div>" +
+      //  '<div class="checkbox-item"><input class="checkbox" type="checkbox"  onclick="checkidoing(event)"/></div> <button class"delete-item" onclick="deleteItemdoing(event)">Delete</button>' +
+      //  "</div>";  
+
+//cach3 
+      // doings.appendChild(products.firstChild);
+      
+      
+
   }
   clearitemscol();
   setstorages2();
 }
-function makealladdContent2(content, randId) {
+function addContent20(content, randId) {
+
   $("#idoing").append(
     '<div style="color: black" class=" productdoing product1" id="row' +
       randId +
@@ -132,64 +166,38 @@ function makealladdContent2(content, randId) {
   );
 }
 
-//function for doneall1 
+//functions for doneall1 button
 let donebutton = document.getElementById("doneall1");
 donebutton.addEventListener("click", doneall);
 function doneall() {
+  // debugger
   let products = document.getElementById("products");
   let dones = document.getElementById("idone");
   idonesave = idonesave.concat(todos);
   while (products.firstChild) {
-    let content = products.firstChild.firstChild.textContent;
-  let randId = Math.random()
-  donealladdContent3(content, randId);
-  products.removeChild(products.firstChild);
+    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
+    products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)   
+    dones.appendChild(products.firstChild);
   }
-  clearitemscol();
+  clearitemscol();    
   setstorages();
   setstorages3();
 }
-function donealladdContent3(content, randId) {
-  $("#idone").append(
-    '<div style="color: black" class="productdone product1" id="row' +
-      randId +
-      '">' +
-      '<div class="taskname">' +
-      content +
-      "</div>" +
-      '<button class= "  delete-item" onclick="deleteItemdone(event)">Delete</button>' +
-      "</div>"
-  );
-}
 
-//function for doneall2
+//functions for doneall2 button
 let donebutton2 = document.getElementById("doneall2");
 donebutton2.addEventListener("click", doneall2);
 function doneall2() {
   let doings = document.getElementById("idoing");
-  // let dones = document.getElementById("idone");
+  let dones = document.getElementById("idone");
   idonesave = idonesave.concat(idoingsave);
   while (doings.firstChild) {
-    let content = doings.firstChild.firstChild.textContent;
-  let randId = Math.random()
-  donealladdContent3(content, randId);
-  doings.removeChild(doings.firstChild);
+    doings.firstChild.removeChild(doings.firstChild.firstChild.nextSibling)
+    dones.appendChild(doings.firstChild);
   }
   clearitemscol2();
   setstorages2();
   setstorages3();
-}
-function donealladdContent3(content, randId) {
-  $("#idone").append(
-    '<div style="color: black" class="productdone product1" id="row' +
-      randId +
-      '">' +
-      '<div class="taskname">' +
-      content +
-      "</div>" +
-      '<button class= "  delete-item" onclick="deleteItemdone(event)">Delete</button>' +
-      "</div>"
-  );
 }
 
 // function clearitems in columns
