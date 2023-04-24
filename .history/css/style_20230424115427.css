@@ -50,13 +50,12 @@
 
 
 #current-time {
-    font-size: 16px;
+    font-size: 15px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     margin-right:30px;
     text-align: center;
     margin-top: 8px;
     align-content: center;
-
 }
 
     .brand {
@@ -109,10 +108,7 @@
         font-family: cursive;
         font-weight: 700;
     }
-.brand #i22{
-    margin-top: 15px;
-    margin-left: 150px;
-}
+
     .brand #i2{
         justify-content: center;
         align-items: center;
@@ -134,7 +130,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 5px;
+        margin-top: 20px;
         position: relative;
 
     }

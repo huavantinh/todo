@@ -50,6 +50,15 @@ let datelist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
   let month = today.getMonth()
   let year = today.getFullYear();
   document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " <br> " + datelist[date] +'<br>'+  day+"/" + month + '/' + year;
+ 
+// var day = today.getDay();
+  // console.log(day);
+  // var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  // var dateTime = date+' '+time;
+  // document.getElementById("current-time").innerHTML = daylist[day] + ' <br> ' + dateTime ;
+ 
 
 function addContent(content, randId) {
   document.getElementById("new-task-message").classList.remove("error-message");

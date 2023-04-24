@@ -39,17 +39,26 @@ function setstorages3() {
     localStorage.setItem("idonelist", JSON.stringify(idonesave));
 }
 
-//show current time
 var today = new Date();
-let date = today.getDay()
+let date = today.getDate()
 let datelist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
   let hours = today.getHours()
   let minutes = today.getMinutes()
   let seconds = today.getSeconds()
   let day =today.getDate();
   let month = today.getMonth()
   let year = today.getFullYear();
-  document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " <br> " + datelist[date] +'<br>'+  day+"/" + month + '/' + year;
+  document.getElementById("current-time").innerHTML = datelist[date] +'<br>'+ hours + ":" + minutes + ":" + seconds + " <br> " + day+"/" + month + '/' + year;
+ 
+// var day = today.getDay();
+  // console.log(day);
+  // var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  // var dateTime = date+' '+time;
+  // document.getElementById("current-time").innerHTML = daylist[day] + ' <br> ' + dateTime ;
+ 
 
 function addContent(content, randId) {
   document.getElementById("new-task-message").classList.remove("error-message");

@@ -1,7 +1,9 @@
 let todos =
   localStorage.getItem("todolist") ? JSON.parse(localStorage.getItem("todolist")) : [];
+
 let idoingsave =
   localStorage.getItem("idoinglist") ? JSON.parse(localStorage.getItem("idoinglist")) : [];
+
 let idonesave =
 localStorage.getItem("idonelist") ? JSON.parse(localStorage.getItem("idonelist")) : [];
 
@@ -38,18 +40,6 @@ function setstorages3() {
   localStorage &&
     localStorage.setItem("idonelist", JSON.stringify(idonesave));
 }
-
-//show current time
-var today = new Date();
-let date = today.getDay()
-let datelist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  let hours = today.getHours()
-  let minutes = today.getMinutes()
-  let seconds = today.getSeconds()
-  let day =today.getDate();
-  let month = today.getMonth()
-  let year = today.getFullYear();
-  document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " <br> " + datelist[date] +'<br>'+  day+"/" + month + '/' + year;
 
 function addContent(content, randId) {
   document.getElementById("new-task-message").classList.remove("error-message");
@@ -95,6 +85,24 @@ function addContent3(content, randId) {
       "</div>"
   );
 }
+// function make all columns
+// let makebutton = document.getElementById("makeall");
+// makebutton.addEventListener("click", makecol);
+// function makecol() {
+//   idoingsave = idoingsave.concat(todos);
+//   var products = document.getElementById("products");
+//   let doings = document.getElementById("idoing");
+//   console.log(doings)
+//   let content = document.getElementsByClassName("taskname");
+//   while (products.firstChild) {
+//       products.firstChild.removeChild(products.firstChild.firstChild.nextSibling)
+//       products.firstChild.removeChild(products.firstChild.firstChild.nextSibling.nextSibling.nextSibling)
+// products.firstChild.innerHTML = '<button class"delete-item" onclick="deleteItemdoing(event)">Delete</button>';
+//     doings.appendChild(products.firstChild);
+//   }
+//   clearitemscol();
+//   setstorages2();
+// }
 
 let makebutton = document.getElementById("makeall");
 makebutton.addEventListener("click", makecol);
@@ -269,6 +277,7 @@ function deleteItemdoing(event) {
   setstorages2();
 }
 function deleteItemdone(event) {
+  // debugger
   var dones = document.getElementById("idone");
   var arraypro = document.getElementsByClassName("productdone"); //// cần phân biệt 3 cột, tìm arraypro của cột 3
   var div = event.currentTarget.parentNode;
@@ -288,6 +297,7 @@ function checkItem(event) {
   let div2 = event.currentTarget.parentNode.parentNode;
   // insert to done list
   let content = div2.firstChild.textContent;
+  // debugger
   idonesave.push(content);
   let indextext = Array.prototype.indexOf.call(todos, content);
   todos.splice(indextext, 1);
@@ -309,6 +319,7 @@ function checkItem(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // debugger
   if (Array.isArray && todos.length > 0) {
     todos.forEach(function printlocal(content, index) {
       addContent(content, index);
@@ -350,6 +361,7 @@ function makedoing(event) {
       '<button class"delete-item" onclick="deleteItemdoing(event)">Delete</button>' +
       "</div>"
   );
+  // debugger
 
   let products = document.getElementById("products");
   products.removeChild(itemcurrent);
@@ -397,32 +409,9 @@ function checkidoing(event) {
 
 //test function change text
 let textslogan = document.getElementById("i22")
-console.log(textslogan);
-let text = textslogan.textContent
-console.log(text);
-
-textslogan.addEventListener("click", changeText)
-
-function changeText(){
-  this.focus();
-  // Sau khi nhap thi luu text moi
-      var newTextContent = event.target.textContent;
-      slogan.push(newTextContent);
-    
-    let text2 = textslogan.textContent
-    console.log(text2);
-  
-  setstorageschange();
+textslogan.addEventListener("click", function)
+function changeText(event){
+  // let initialText = i22.textContent; 
+  i22.innerHTML =
+      '<span style="background-color: lime">Button clicked</span>';
 }
-
-let slogan = localStorage.getItem("sloganinput") ? JSON.parse(localStorage.getItem("sloganinput")) : [];
-function setstorageschange() {
-  localStorage && localStorage.setItem("sloganinput", JSON.stringify(slogan));
-}
-
-var textBox2 = document.getElementById("input-sub");
-textBox2.addEventListener("keyup", function (event) {
-  if (event.keyCode) {
-    submit();
-  }
-});
