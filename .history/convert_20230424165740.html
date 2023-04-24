@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Converters</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/styleprofile.css">
+    <link rel="stylesheet" href="./css/convert.css">
 </head>
 <body>
     <nav class="nav-bar navbar navbar-default">
@@ -28,7 +28,7 @@
             <div class="list-menu">
               <a href="index.html">Workspace</a>
               <a href="myprofile.html" target="_self">Profile</a>
-              <a href="https://vtcore.com/">Shopping for work</a>
+              <a href="index.html">Shopping for work</a>
               <a href="index.html">List task</a>
               <a href="index.html">Relax</a>
               <a href="convert.html">Converters</a>
@@ -36,12 +36,25 @@
           </div>
         </div>
       </nav>
-    <div class="container">
-        <li>Name: HVT</li>
-        <li>Born: 31/10/1997</li>
-        <li>Sex: Man</li>
-        <li>School:DUT</li>
-        <li>Intern</li>
-    </div>
+      <div class="container">
+        <div class="contentconvert">
+            <div class="age-cal">
+            <i class="function-name">Age Calculator: </i>
+                <div class="current-time">
+                    <i  id="text-current">Current-time: </i>
+                    <div id="current-time" class="current-time-age"></div>
+                </div>
+                <div class="date-of-birth">
+                    <i>Date of Birth:</i>
+                </div>
+            </div>
+            
+
+        </div>
+      </div>
+    <script src="./convertapp.js"></script>
+    <script src="./app.js"></script>
+
+
 </body>
 </html>

@@ -1,0 +1,15 @@
+ /* resetcss */
+ *{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    margin-top: 10px;
+    width: 100%;
+    height: 2000px;
+    background-color: #f1e9f4;
+}
+.contentconvert{
+    margin-left: 50%;
+    
+}

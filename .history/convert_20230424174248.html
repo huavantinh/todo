@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converters</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/convert.css" />
+  </head>
+  <body>
+    <nav class="nav-bar navbar navbar-default">
+      <div class="container-fluid">
+        <div class="brand">
+          <!-- line1top -->
+          <img src="./css/img/logo-brand.png" alt="Brand" />
+          <i id="i1">ActionNow</i>
+
+          <i id="i22" contenteditable="true"
+            >Take action now, because tomorrow never comes.</i
+          >
+          <!-- search  -->
+          <div class="search-box">
+            <input type="text" />
+            <button>Search</button>
+          </div>
+        </div>
+        <!-- menu  -->
+        <div class="nav-menu">
+          <div class="list-menu">
+            <a href="index.html">Workspace</a>
+            <a href="myprofile.html" target="_self">Profile</a>
+            <a href="index.html">Shopping for work</a>
+            <a href="index.html">List task</a>
+            <a href="index.html">Relax</a>
+            <a href="convert.html">Converters</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="contentconvert">
+        <div class="age-cal">
+          <i class="function-name">1. Age Calculator: </i>
+          <div class="current-time">
+            <i id="text-current">Current-time: </i>
+            <div id="current-time" class="current-time-age"></div>
+          </div>
+          <div class="date-of-birth">
+            <i>Date of Birth:</i>
+            <div id="input-date">
+              <input type="date"  />
+            </div>
+            <div class="button-getage"><button class="button-text">Get Age</button></div>
+
+            <div class="Age-result">
+                <i>  Age-result:      ==> </i>
+                <div class="age-result-num"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./convertapp.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
